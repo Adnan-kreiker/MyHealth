@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-header {
+    @apply font-bold text-lg text-white px-6;
+  }
+  .btn-header:hover {
+    @apply text-yellow-300 cursor-pointer;
+  }
+  .clip-lg {
+    clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+  }
+  .clip {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  }
+  .clip-left {
+    clip-path: polygon(0 0, 100% 29%, 100% 100%, 0 100%);
+  }
+}
