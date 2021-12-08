@@ -1,6 +1,6 @@
 <template>
   <div
-    class="my-16 py-4 sm:px-16 px-10 clip-left bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
+    class="my-16 py-4 sm:px-10 px-8 clip-left bg-gradient-to-r from-purple-400 via-pink-500 to-red-500"
   >
     <h2 class="text-white font-bold text-5xl pt-24">
       Calculate Your Caloric Needs
@@ -8,18 +8,18 @@
     <transition name="slide" mode="out-in">
       <div
         v-if="!showResults"
-        class="grid grid-cols-4 gap-2 items-center text-white md:w-1/2 mx-auto my-10 bg-purple-500 p-4 rounded-lg shadow-xl"
+        class="grid grid-cols-5 gap-2 items-center text-white md:w-4/5 max-w-screen-sm mx-auto my-10 bg-purple-500 p-4 rounded-lg shadow-xl"
       >
         <span class="col-span-1 font-bold">Age</span>
         <input
           id="age"
           v-model="age"
-          class="col-span-3 text-purple-700 py-1 px-3"
+          class="col-span-4 text-purple-700 py-1 px-3"
           type="number"
           name="age"
         />
         <span class="col-span-1 font-bold">Gender</span>
-        <div class="col-span-3">
+        <div class="col-span-4">
           <input
             id="male"
             v-model="gender"
@@ -43,7 +43,7 @@
         <input
           id="height"
           v-model="height"
-          class="col-span-3 py-1 px-3 text-purple-700"
+          class="col-span-4 py-1 px-3 text-purple-700"
           type="number"
           name="height"
         />
@@ -51,7 +51,7 @@
         <input
           id="weight"
           v-model="weight"
-          class="col-span-3 py-1 px-3 text-purple-700"
+          class="col-span-4 py-1 px-3 text-purple-700"
           type="number"
           name="weight"
         />
@@ -59,7 +59,7 @@
         <select
           id="activity"
           v-model="selected"
-          class="col-span-3 py-1 px-3 text-purple-700"
+          class="col-span-4 py-1 px-3 text-purple-700"
           t
           name="activity"
         >
@@ -73,7 +73,7 @@
           </option>
         </select>
         <div class="col-span-1"></div>
-        <div class="col-span-3">
+        <div class="col-span-4">
           <button
             class="mr-6 bg-yellow-400 font-bold py-3 px-5 rounded-xl mt-2 transition duration-500 ease-in-out hover:bg-yellow-600 transform hover:-translate-y-1 hover:scale-110"
             :disabled="!check"
@@ -88,7 +88,10 @@
       </div>
       <results
         v-else
-        :data="[caloricIntake, mildWeightLoss, weightLoss, extremeWeightLoss]"
+        :caloric-intake="caloricIntake"
+        :mild-weight-loss="mildWeightLoss"
+        :weight-loss="weightLoss"
+        :extreme-weight-loss="extremeWeightLoss"
       ></results>
     </transition>
   </div>

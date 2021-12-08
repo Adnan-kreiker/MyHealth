@@ -33,10 +33,11 @@
             alt=""
           />
           <h3 class="text-center text-2xl mx-auto font-bold my-2">
-            Healthy Recipe
+            Healthy Meals
           </h3>
           <p class="mx-auto text-center w-3/4">
-            Healthier recipes from food & nutrition experts
+            Learn how to become <br />
+            a meal-planning pro
           </p>
         </div>
         <div
@@ -50,10 +51,11 @@
             alt=""
           />
           <h3 class="text-center text-2xl mx-auto font-bold my-2">
-            Healthy Recipe
+            Healthy Eating
           </h3>
           <p class="mx-auto text-center w-3/4">
-            Healthier recipes from food & nutrition experts
+            Eat healthy with our <br />
+            pro & inspirational tips
           </p>
         </div>
         <div
@@ -67,10 +69,11 @@
             alt=""
           />
           <h3 class="text-center text-2xl mx-auto font-bold my-2">
-            Healthy Recipe
+            Healthy Life
           </h3>
           <p class="mx-auto text-center w-3/4">
-            Healthier recipes from food & nutrition experts
+            Your life is your choice, <br />
+            it is up to you to make it better
           </p>
         </div>
       </div>

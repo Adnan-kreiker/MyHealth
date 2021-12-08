@@ -1,10 +1,20 @@
-.slide-leave-active,
-.slide-enter-active {
-  transition: 1s;
+.slide-enter-active,
+.slide-leave-enter {
+  transform: translateX(0);
+  transition: all 0.8s ease-in-out;
 }
-.slide-enter {
-  transform: translate(100%, 0);
-}
+.slide-enter,
 .slide-leave-to {
-  transform: translate(-100%, 0);
+  transform: translateX(100%);
+}
+
+.glide-enter-active,
+.glide-leave-active {
+  transition: transform 0.2s ease;
+}
+
+.glide-enter,
+.glide-leave-to {
+  transform: translateX(-100%);
+  transition: all 150ms ease-in 0s;
 }
