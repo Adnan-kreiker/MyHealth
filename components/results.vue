@@ -14,7 +14,7 @@
         <h2 class="pt-4 text-lg px-3 text-center whitespace-nowrap">
           Maintain Weight
         </h2>
-        <p class="text-center px-3 pb-4">{{ caloricIntake }}kcals</p>
+        <p class="text-center px-3 pb-4">{{ caloricIntake }} kcals</p>
       </div>
       <div
         class="col-span-4 sm:col-span-2 lg:col-span-1 shadow-2xl hover:z-10 bg-indigo-500 h-full rounded-lg transition duration-500 ease-in-out hover:bg-indigo-700 transform hover:-translate-y-1 hover:scale-110"
@@ -22,7 +22,7 @@
         <h2 class="pt-4 text-lg px-3 text-center whitespace-nowrap">
           Mild weight loss
         </h2>
-        <p class="text-center px-3 pb-4">{{ mildWeightLoss }}kcals</p>
+        <p class="text-center px-3 pb-4">{{ mildWeightLoss }} kcals</p>
       </div>
       <div
         class="col-span-4 sm:col-span-2 lg:col-span-1 shadow-2xl hover:z-10 bg-blue-500 h-full rounded-lg transition duration-500 ease-in-out hover:bg-blue-700 transform hover:-translate-y-1 hover:scale-110"
@@ -30,7 +30,7 @@
         <h2 class="pt-4 text-lg px-3 text-center whitespace-nowrap">
           Weight loss
         </h2>
-        <p class="text-center px-3 pb-4">{{ weightLoss }}kcals</p>
+        <p class="text-center px-3 pb-4">{{ weightLoss }} kcals</p>
       </div>
       <div
         class="col-span-4 sm:col-span-2 lg:col-span-1 shadow-2xl hover:z-10 bg-purple-500 h-full rounded-lg transition duration-500 ease-in-out hover:bg-purple-700 transform hover:-translate-y-1 hover:scale-110"
@@ -38,7 +38,7 @@
         <h2 class="pt-4 text-lg px-3 text-center whitespace-nowrap">
           Extreme weight loss
         </h2>
-        <p class="text-center px-3 pb-4">{{ extremeWeightLoss }}kcals</p>
+        <p class="text-center px-3 pb-4">{{ extremeWeightLoss }} kcals</p>
       </div>
     </div>
   </div>

@@ -1,12 +1,16 @@
 <template>
   <div>
     <hero-section></hero-section>
-    <features></features>
-    <calorie-calculator></calorie-calculator>
+    <features id="features"></features>
+    <calorie-calculator id="calculator"></calorie-calculator>
+    <recipes id="recipes"></recipes>
   </div>
 </template>
 
 <script>
-export default {}
+import recipes from '~/components/recipes.vue'
+export default {
+  components: { recipes },
+}
 </script>
 Features

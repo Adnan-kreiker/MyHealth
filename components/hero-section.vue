@@ -1,13 +1,13 @@
 <template>
   <main
-    class="bg-gradient-to-r from-red-400 via-pink-500 to-purple-500 clip sm:clip-lg m-0 pb-10"
+    class="bg-gradient-to-r from-red-400 via-pink-500 to-purple-500 clip lg:clip-lg m-0 pb-10"
   >
     <div
-      class="grid grid-cols-3 grid-rows-1 sm:ml-16 ml-10 mr-8 xl:mr-32 pt-4 sm:pt-10 max-h-[calc(100vh-40px)]"
+      class="grid grid-cols-4 grid-rows-1 sm:ml-16 ml-10 mr-8 pt-4 sm:pt-10 max-h-[calc(100vh-10px)]"
     >
-      <div class="col-span-3 sm:col-span-2">
+      <div class="col-span-4 sm:col-span-2 lg:col-span-2">
         <h1
-          class="text-white text-center sm:text-left sm:text-7xl lg:text-8xl text-5xl block"
+          class="text-white text-center sm:text-left sm:text-6xl lg:text-8xl text-5xl block"
         >
           Regain Control Over Your <span class="text-yellow-400">Health</span>
         </h1>
@@ -22,14 +22,20 @@
           Always take care of your health starting from the food menu that you
           consume everyday
         </p>
-        <button
-          class="block font-bold py-4 text-gray-700 mx-auto sm:mr-auto sm:ml-0 px-12 mt-5 bg-yellow-400 rounded-lg shadow-xl transition duration-500 ease-in-out transform hover:scale-110"
-        >
-          Click Now
-        </button>
+        <a href="#recipes">
+          <button
+            class="block capitalize text-lg font-bold py-4 text-gray-700 mx-auto sm:mr-auto sm:ml-0 px-12 mt-5 bg-yellow-400 rounded-lg shadow-xl transition duration-500 ease-in-out transform hover:scale-110"
+          >
+            Check our recipes
+          </button>
+        </a>
       </div>
-      <div class="col-span-1 hidden sm:block">
-        <img src="/hero.png" alt="" class="ml-auto object-cover" />
+      <div class="col-span-2 lg:col-span-2 hidden sm:block">
+        <img
+          src="/hero.png"
+          alt=""
+          class="mx-auto max-h-[400px] object-cover"
+        />
       </div>
     </div>
   </main>

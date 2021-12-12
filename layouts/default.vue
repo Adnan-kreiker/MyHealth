@@ -2,19 +2,23 @@
   <main>
     <div class="bg-gradient-to-r from-red-400 via-pink-500 to-purple-500">
       <nav class="flex flex-row justify-between py-3 sm:mx-16 mx-10">
-        <div class="flex flex-row">
-          <img
-            src="/logo.svg"
-            height="25"
-            width="40"
-            alt=""
-            class="inline-block mr-1"
-          />
-          <span class="font-extrabold text-3xl text-white">MyHealth</span>
-        </div>
+        <nuxt-link class="hover:cursor-pointer" to="/">
+          <div class="flex flex-row">
+            <img
+              src="/logo.svg"
+              height="25"
+              width="40"
+              alt=""
+              class="inline-block mr-1"
+            />
+            <span class="font-extrabold text-3xl text-white">MyHealth</span>
+          </div>
+        </nuxt-link>
         <div class="hidden lg:block">
-          <span class="btn-header">Kcal Calculator</span>
-          <span class="btn-header">Features</span>
+          <a href="#calculator"
+            ><span class="btn-header">Kcal Calculator</span></a
+          >
+          <a href="#features"><span class="btn-header">Features</span></a>
           <span class="btn-header">About</span>
           <span class="btn-header">FAQ</span>
         </div>
@@ -55,6 +59,136 @@
       </nav>
     </div>
     <Nuxt />
+    <footer
+      class="bottom-0 text-white pt-8 pb-6 bg-gradient-to-r from-red-400 via-pink-500 to-purple-500"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap text-left lg:text-left">
+          <div class="w-full lg:w-6/12 px-4">
+            <h4 class="text-3xl fonat-semibold text-blueGray-700">
+              Let's keep in touch!
+            </h4>
+            <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
+              Find us on any of these platforms, we respond 1-2 business days.
+            </h5>
+            <div class="mt-6 lg:mb-0 mb-6">
+              <button
+                class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                type="button"
+              >
+                <fa
+                  class="text-purple-500"
+                  :icon="['fab', 'twitter']"
+                ></fa></button
+              ><button
+                class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                type="button"
+              >
+                <fa
+                  class="text-purple-500"
+                  :icon="['fab', 'facebook-square']"
+                ></fa></button
+              ><button
+                class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                type="button"
+              >
+                <fa
+                  class="text-purple-500"
+                  :icon="['fab', 'dribbble']"
+                ></fa></button
+              ><button
+                class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                type="button"
+              >
+                <fa class="text-purple-500" :icon="['fab', 'github']"></fa>
+              </button>
+            </div>
+          </div>
+          <div class="w-full lg:w-6/12 px-4">
+            <div class="flex flex-wrap items-top mb-6">
+              <div class="w-full lg:w-4/12 px-4 ml-auto">
+                <span
+                  class="block uppercase text-blueGray-500 text-sm font-semibold mb-2"
+                  >Useful Links</span
+                >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      >Blog</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      >Github</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      >Free Products</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="w-full lg:w-4/12 px-4">
+                <span
+                  class="block uppercase text-blueGray-500 text-sm font-semibold mb-2"
+                  >Other Resources</span
+                >
+                <ul class="list-unstyled">
+                  <li>
+                    <a
+                      class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      >MIT License</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      >Terms &amp; Conditions</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="my-6 border-blueGray-300" />
+        <div
+          class="flex flex-wrap items-center md:justify-between justify-center"
+        >
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-blueGray-500 font-semibold py-1">
+              <a
+                href="https://www.creative-tim.com?ref=njs-profile"
+                class="text-blueGray-500 hover:text-blueGray-800"
+                >MyHealth</a
+              >.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </main>
 </template>
 

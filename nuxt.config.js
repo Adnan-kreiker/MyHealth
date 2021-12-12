@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -16,7 +18,9 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/vue-mdi.js' },
+    {
+      src: '~/plugins/vue-mdi.js',
+    },
     {
       src: '~/plugins/click-away.js',
     },
@@ -31,6 +35,16 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    [
+      '@nuxtjs/fontawesome',
+      {
+        component: 'fa',
+        suffix: false,
+        icons: {
+          brands: ['faGithub', 'faDribbble', 'faFacebookSquare', 'faTwitter'],
+        },
+      },
+    ],
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -39,6 +53,8 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/dotenv',
+    ['vue-scrollto/nuxt', { duration: 300 }],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
