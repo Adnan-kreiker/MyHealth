@@ -24,6 +24,13 @@ export default {
     {
       src: '~/plugins/click-away.js',
     },
+    {
+      src: '~/plugins/scrollto.js',
+    },
+    {
+      src: '~/plugins/apexcharts.js',
+      mode: 'client',
+    },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

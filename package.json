@@ -17,10 +17,13 @@
     "@nuxtjs/fontawesome": "^1.1.2",
     "@nuxtjs/pwa": "^3.3.5",
     "@tailwindcss/line-clamp": "^0.3.0",
+    "apexcharts": "^3.32.0",
     "core-js": "^3.15.1",
     "mdi-vue": "^3.0.12",
     "nuxt": "^2.15.7",
-    "vue-clickaway": "^2.2.2"
+    "vue-apexcharts": "^1.6.2",
+    "vue-clickaway": "^2.2.2",
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",

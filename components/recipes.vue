@@ -103,6 +103,7 @@
           </div>
         </nuxt-link>
       </div>
+      <spinner v-else></spinner>
     </div>
   </client-only>
 </template>

@@ -1,57 +1,59 @@
 <template>
   <div
-    class="bg-gradient-to-r from-red-400 via-pink-500 my-0 py-8 to-purple-500"
+    class="bg-gradient-to-r min-h-screen from-red-400 via-pink-500 my-0 py-8 to-purple-500"
   >
     <div
       v-if="recipe"
       class="mx-8 border-2 px-6 shadow-2xl drop-shadow-2xl bg-gray-100 rounded-md border-gray-300 w-fit h-fit md:mx-12 lg:mx-16 pb-5"
     >
-      <h2 class="text-purple-700 px-0 font-bold text-5xl mx-auto sm:mr-20 py-5">
+      <h2
+        class="text-purple-700 bg-gradient-to-r from-red-400 via-pink-500 my-0 text-transparent bg-clip-text to-purple-500 px-0 font-bold text-5xl mx-auto sm:mr-20 py-5"
+      >
         {{ recipe.recipe.label }}
       </h2>
-      <img
-        :src="recipe.recipe.image"
-        class="shadow-2xl transition hover:cursor-pointer duration-500 ease-in-out transform hover:scale-105 rounded-lg"
-        alt=""
-      />
-      <div class="grid grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <img
+          height="300"
+          :src="recipe.recipe.image"
+          class="shadow-2xl col-span-2 mx-auto sm:col-span-1 transition hover:cursor-pointer duration-500 ease-in-out transform hover:scale-105 rounded-lg"
+          alt=""
+        />
+        <div height="250" class="col-span-2 sm:col-span-1">
+          <h2 class="py-4 text-2xl underline decoration-2 decoration-red-500">
+            Nutrition
+          </h2>
+          <client-only>
+            <div id="chart" class="mx-auto flex flex-row justify-center">
+              <apexchart
+                type="pie"
+                width="380"
+                :options="chartOptions"
+                :series="[protein, fat, carbs]"
+              ></apexchart>
+            </div>
+          </client-only>
+        </div>
+      </div>
+      <div>
         <div>
           <h2
-            class="py-4 text-2xl underline decoration-2 decoration-purple-500"
+            class="pb-4 pt-0 pl-0 lg:pl-10 text-2xl underline decoration-2 decoration-purple-500"
           >
             Ingredients
           </h2>
-          <ul>
+          <ul class="pl-4 lg:pl-16">
             <li
-              v-for="ingredient in recipe.recipe.ingredients"
-              :key="ingredient.text"
+              v-for="(ingredient, i) in recipe.recipe.ingredients"
+              :key="i"
+              class="list-disc"
             >
               {{ ingredient.text }}
             </li>
           </ul>
         </div>
-        <div>
-          <h2 class="py-4 text-2xl underline decoration-2 decoration-red-500">
-            Nutrition
-          </h2>
-          <span
-            >Kcals:
-            {{
-              Math.round(recipe.recipe.totalNutrients.ENERC_KCAL.quantity)
-            }}</span
-          >
-          <span
-            >Protein:
-            {{ Math.round(recipe.recipe.totalNutrients.PROCNT.quantity) }}</span
-          >
-          <!-- <div>
-            <p v-for="label in recipe.recipe.healthLabels" :key="label">
-              {{ label }}
-            </p>
-          </div> -->
-        </div>
       </div>
     </div>
+    <spinner v-else></spinner>
   </div>
 </template>
 
@@ -60,6 +62,52 @@ export default {
   data() {
     return {
       recipe: null,
+      kcal: null,
+      protein: null,
+      fat: null,
+      carbs: null,
+      chartOptions: {
+        chart: {
+          width: 380,
+          type: 'pie',
+        },
+        labels: ['Protein', 'Fat', 'Carbs'],
+        responsive: [
+          {
+            breakpoint: 880,
+            options: {
+              chart: {
+                width: 300,
+              },
+              legend: {
+                position: 'bottom',
+              },
+            },
+          },
+          {
+            breakpoint: 639,
+            options: {
+              chart: {
+                width: 400,
+              },
+              legend: {
+                position: 'right',
+              },
+            },
+          },
+          {
+            breakpoint: 499,
+            options: {
+              chart: {
+                width: 300,
+              },
+              legend: {
+                position: 'bottom',
+              },
+            },
+          },
+        ],
+      },
     }
   },
   async fetch() {
@@ -68,6 +116,14 @@ export default {
         `${process.env.FOOD_API}/recipes/v2/${this.$route.params.id}?type=public&app_id=${process.env.APP_ID}&app_key=${process.env.API_KEY}`
       )
       this.recipe = res
+      this.kcal = Math.round(
+        this.recipe.recipe.totalNutrients.ENERC_KCAL.quantity
+      )
+      this.protein = Math.round(
+        this.recipe.recipe.totalNutrients.PROCNT.quantity
+      )
+      this.fat = Math.round(this.recipe.recipe.totalNutrients.FAT.quantity)
+      this.carbs = Math.round(this.recipe.recipe.totalNutrients.CHOCDF.quantity)
       console.log(res)
     } catch (error) {
       console.log(error)

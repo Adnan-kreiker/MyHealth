@@ -15,12 +15,18 @@
           </div>
         </nuxt-link>
         <div class="hidden lg:block">
-          <a href="#calculator"
-            ><span class="btn-header">Kcal Calculator</span></a
+          <nuxt-link
+            v-scroll-to="{ el: '#calculator' }"
+            :to="{ path: '/', hash: 'calculator' }"
+            ><span class="btn-header">Kcal Calculator</span></nuxt-link
           >
-          <a href="#features"><span class="btn-header">Features</span></a>
+          <nuxt-link
+            v-scroll-to="{ el: '#features' }"
+            :to="{ path: '/', hash: 'features' }"
+            ><span class="btn-header">Features</span></nuxt-link
+          >
           <span class="btn-header">About</span>
-          <span class="btn-header">FAQ</span>
+          <nuxt-link to="/faq"><span class="btn-header">FAQ</span></nuxt-link>
         </div>
         <div v-if="!showMenu" class="lg:hidden" @click="showMenu = true">
           <mdicon
