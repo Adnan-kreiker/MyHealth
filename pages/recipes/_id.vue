@@ -1,13 +1,13 @@
 <template>
   <div
-    class="bg-gradient-to-r min-h-screen from-red-400 via-pink-500 my-0 py-8 to-purple-500"
+    class="bg-gradient-to-r grid grid-cols-12 min-h-screen from-red-400 via-pink-500 my-0 py-8 to-purple-500"
   >
     <div
       v-if="recipe"
-      class="mx-8 border-2 px-6 shadow-2xl drop-shadow-2xl bg-gray-100 rounded-md border-gray-300 w-fit h-fit md:mx-12 lg:mx-16 pb-5"
+      class="mx-4 mt-12 border-2 px-2 md:px-6 col-span-12 lg:col-span-8 shadow-2xl drop-shadow-2xl bg-gray-100 rounded-md border-gray-300 w-fit h-fit md:mx-12 lg:mx-16 pb-5"
     >
       <h2
-        class="text-purple-700 bg-gradient-to-r from-red-400 via-pink-500 my-0 text-transparent bg-clip-text to-purple-500 px-0 font-bold text-5xl mx-auto sm:mr-20 py-5"
+        class="text-purple-700 bg-gradient-to-r from-red-400 via-pink-500 my-0 text-transparent bg-clip-text to-purple-500 px-0 font-bold text-5xl mx-auto py-5"
       >
         {{ recipe.recipe.label }}
       </h2>
@@ -54,14 +54,51 @@
       </div>
     </div>
     <spinner v-else></spinner>
+    <div class="col-span-12">
+      <h2 class="font-bold text-3xl mt-10 ml-11 mb-4 text-white">
+        Suggestions
+      </h2>
+      <div class="lg:col-span-4 ml-6 flex flex-row flex-wrap lg:flex-col">
+        <nuxt-link
+          v-is="`div`"
+          v-for="(suggestion, i) in suggestions"
+          :key="i"
+          :to="`/recipes/${getRecipeId(suggestion.recipe.uri)}`"
+        >
+          <div
+            class="mx-auto mb-4 min-w-[250px] mr-6 p-1 shadow-2xl drop-shadow-2xl bg-gray-100 rounded-md border-gray-300 max-w-[300px] h-fit"
+          >
+            <img
+              height="250"
+              class="h-auto object-cover"
+              :src="suggestion.recipe.image"
+              alt=""
+            />
+            <h2 class="font-bold underline decoration-2 decoration-red-500">
+              {{ suggestion.recipe.label }}
+            </h2>
+            <p>
+              {{
+                Math.round(suggestion.recipe.totalNutrients.ENERC_KCAL.quantity)
+              }}
+              Kcals | {{ Math.round(suggestion.recipe.digest[2].total) }}g
+              protein
+            </p>
+          </div>
+        </nuxt-link>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import { getRecipeId } from '~/utility/getRecipeId'
+
 export default {
   data() {
     return {
       recipe: null,
+      suggestions: null,
       kcal: null,
       protein: null,
       fat: null,
@@ -115,6 +152,10 @@ export default {
       const res = await this.$axios.$get(
         `${process.env.FOOD_API}/recipes/v2/${this.$route.params.id}?type=public&app_id=${process.env.APP_ID}&app_key=${process.env.API_KEY}`
       )
+      const sug = await this.$axios.$get(
+        `${process.env.FOOD_API}/recipes/v2?type=public&q=meat&app_id=${process.env.APP_ID}&app_key=${process.env.API_KEY}&diet=high-protein`
+      )
+      this.suggestions = sug.hits.splice(0, 2)
       this.recipe = res
       this.kcal = Math.round(
         this.recipe.recipe.totalNutrients.ENERC_KCAL.quantity
@@ -128,6 +169,9 @@ export default {
     } catch (error) {
       console.log(error)
     }
+  },
+  methods: {
+    getRecipeId,
   },
 }
 </script>

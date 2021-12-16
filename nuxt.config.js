@@ -1,6 +1,6 @@
-require('dotenv').config()
+import { defineNuxtConfig } from '@nuxt/bridge'
 
-export default {
+export default defineNuxtConfig({
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'myHealth',
@@ -78,4 +78,6 @@ export default {
   build: {
     transpile: ['mdi-vue'],
   },
-}
+
+  bridge: false,
+})

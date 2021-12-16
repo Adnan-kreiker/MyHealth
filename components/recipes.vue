@@ -15,7 +15,7 @@
         <nuxt-link
           v-for="recipe in recipes"
           :key="recipe.id"
-          :to="`/recipes/${getID(recipe.recipe.uri)}`"
+          :to="`/recipes/${getRecipeId(recipe.recipe.uri)}`"
           class="py-5 col-span-12 sm:col-span-6 w-5/6 mx-auto max-w-[300px] lg:col-span-4 flex flex-col justify-center"
         >
           <div>
@@ -109,6 +109,7 @@
 </template>
 
 <script>
+import { getRecipeId } from '~/utility/getRecipeId'
 export default {
   data() {
     return {
@@ -134,10 +135,7 @@ export default {
     }
   },
   methods: {
-    getID(string) {
-      const start = string.indexOf('_') + 1
-      return string.slice(start)
-    },
+    getRecipeId,
   },
 }
 </script>
