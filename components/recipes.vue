@@ -15,6 +15,9 @@
         <nuxt-link
           v-for="recipe in recipes"
           :key="recipe.id"
+          data-aos="zoom-in"
+          data-aos-duration="500"
+          data-aos-offset="300"
           :to="`/recipes/${getRecipeId(recipe.recipe.uri)}`"
           class="py-5 col-span-12 sm:col-span-6 w-5/6 mx-auto max-w-[300px] lg:col-span-4 flex flex-col justify-center"
         >

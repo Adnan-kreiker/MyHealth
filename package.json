@@ -17,6 +17,7 @@
     "@nuxtjs/fontawesome": "^1.1.2",
     "@nuxtjs/pwa": "^3.3.5",
     "@tailwindcss/line-clamp": "^0.3.0",
+    "aos": "^2.3.4",
     "apexcharts": "^3.32.0",
     "core-js": "^3.15.1",
     "mdi-vue": "^3.0.12",

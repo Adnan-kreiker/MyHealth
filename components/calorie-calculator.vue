@@ -9,6 +9,8 @@
       <transition name="slide" mode="out-in">
         <div
           v-if="!showResults"
+          data-aos-duration="750"
+          data-aos="fade-up"
           class="grid grid-cols-5 gap-2 items-center max-w-sm text-white sm:w-4/5 sm:max-w-screen-sm mx-auto my-10 bg-purple-500 p-4 rounded-lg shadow-xl"
         >
           <span class="sm:col-span-1 col-span-2 font-bold">Age</span>

@@ -1,13 +1,13 @@
 <template>
   <div
-    class="bg-gradient-to-r grid grid-cols-12 min-h-screen from-red-400 via-pink-500 my-0 py-8 to-purple-500"
+    class="bg-gradient-to-r px-6 grid grid-cols-12 min-h-screen from-red-400 via-pink-500 my-0 py-8 to-purple-500"
   >
     <div
       v-if="recipe"
-      class="mx-4 mt-12 border-2 px-2 md:px-6 col-span-12 lg:col-span-8 shadow-2xl drop-shadow-2xl bg-gray-100 rounded-md border-gray-300 w-fit h-fit md:mx-12 lg:mx-16 pb-5"
+      class="mt-12 border-2 px-2 md:px-6 col-span-12 lg:col-span-8 shadow-2xl drop-shadow-2xl bg-gray-100 rounded-md border-gray-300 w-fit h-fit md:mx-auto pb-5"
     >
       <h2
-        class="text-purple-700 bg-gradient-to-r from-red-400 via-pink-500 my-0 text-transparent bg-clip-text to-purple-500 px-0 font-bold text-5xl mx-auto py-5"
+        class="text-purple-700 bg-gradient-to-r from-red-400 via-pink-500 my-0 text-transparent bg-clip-text to-purple-500 px-0 font-bold text-2xl md:text-5xl mx-auto py-5"
       >
         {{ recipe.recipe.label }}
       </h2>
@@ -19,7 +19,7 @@
           alt=""
         />
         <div height="250" class="col-span-2 sm:col-span-1">
-          <h2 class="py-4 text-2xl underline decoration-2 decoration-red-500">
+          <h2 class="pb-4 text-2xl underline decoration-2 decoration-red-500">
             Nutrition
           </h2>
           <client-only>
@@ -54,19 +54,22 @@
       </div>
     </div>
     <spinner v-else></spinner>
-    <div class="col-span-12">
-      <h2 class="font-bold text-3xl mt-10 ml-11 mb-4 text-white">
+    <div class="col-span-12 lg:col-span-4">
+      <h2
+        class="font-bold text-3xl ml-8 lg:ml-0 mt-10 lg:text-center mb-4 text-white"
+      >
         Suggestions
       </h2>
-      <div class="lg:col-span-4 ml-6 flex flex-row flex-wrap lg:flex-col">
+      <div
+        class="lg:col-span-4 justify-evenly content-center flex flex-row flex-wrap lg:flex-col"
+      >
         <nuxt-link
-          v-is="`div`"
           v-for="(suggestion, i) in suggestions"
           :key="i"
           :to="`/recipes/${getRecipeId(suggestion.recipe.uri)}`"
         >
           <div
-            class="mx-auto mb-4 min-w-[250px] mr-6 p-1 shadow-2xl drop-shadow-2xl bg-gray-100 rounded-md border-gray-300 max-w-[300px] h-fit"
+            class="mx-auto mb-4 min-w-[250px] p-1 shadow-2xl drop-shadow-2xl bg-gray-100 rounded-md border-gray-300 max-w-[300px] h-fit"
           >
             <img
               height="250"

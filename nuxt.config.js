@@ -31,6 +31,10 @@ export default defineNuxtConfig({
       src: '~/plugins/apexcharts.js',
       mode: 'client',
     },
+    {
+      src: '~/plugins/aos.js',
+      mode: 'client',
+    },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

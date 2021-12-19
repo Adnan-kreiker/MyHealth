@@ -1,6 +1,9 @@
 <template>
   <div class="my-16 sm:mx-16 mx-4">
-    <div class="sm:flex flex-col w-full sm:w-max sm:flex-row">
+    <div
+      data-aos="fade-right"
+      class="sm:flex flex-col w-full sm:w-max sm:flex-row"
+    >
       <img
         height="40"
         width="100"
@@ -21,6 +24,8 @@
         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 bg-gradient-to-r from-purple-300 to-purple-600 rounded-3xl"
       >
         <div
+          data-aos="flip-left"
+          data-aos-duration="750"
           class="py-4 mx-2 rounded-lg transition duration-500 ease-in-out0 hover:bg-yellow-500 transform hover:-translate-y-1 hover:scale-110"
         >
           <img height="70" width="70" class="mx-auto" src="/salad.png" alt="" />
@@ -32,6 +37,8 @@
           </p>
         </div>
         <div
+          data-aos="flip-left"
+          data-aos-duration="750"
           class="py-4 mx-2 rounded-lg transition duration-500 ease-in-out hover:bg-yellow-500 transform hover:-translate-y-1 hover:scale-110"
         >
           <img
@@ -51,6 +58,8 @@
           </p>
         </div>
         <div
+          data-aos="flip-left"
+          data-aos-duration="750"
           class="py-4 mx-2 rounded-lg transition duration-500 ease-in-out hover:bg-yellow-500 transform hover:-translate-y-1 hover:scale-110"
         >
           <img
@@ -70,6 +79,8 @@
           </p>
         </div>
         <div
+          data-aos="flip-left"
+          data-aos-duration="750"
           class="py-4 mx-2 rounded-lg transition duration-500 ease-in-out hover:bg-yellow-500 transform hover:-translate-y-1 hover:scale-110"
         >
           <img

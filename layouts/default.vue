@@ -25,7 +25,9 @@
             :to="{ path: '/', hash: 'features' }"
             ><span class="btn-header">Features</span></nuxt-link
           >
-          <span class="btn-header">About</span>
+          <nuxt-link to="/about"
+            ><span class="btn-header">About</span></nuxt-link
+          >
           <nuxt-link to="/faq"><span class="btn-header">FAQ</span></nuxt-link>
         </div>
         <div v-if="!showMenu" class="lg:hidden" @click="showMenu = true">
@@ -40,25 +42,48 @@
           <div
             v-if="showMenu"
             v-on-clickaway="toggleDrawer"
-            class="transform fixed w-1/2 left-0 h-screen shadow-2xl z-50 top-0 bg-white ease-in-out duration-300"
+            class="transform fixed text-white w-1/2 left-0 h-screen shadow-2xl z-50 top-0 bg-gradient-to-r from-purple-400 via-pink-500 to-media-500 ease-in-out duration-300"
           >
             <ul class="p-3 text-lg">
-              <li class="mb-4 flex flex-row">
-                <mdicon class="mt-0.5 mr-2" name="calculator"></mdicon>
-                <p>Kcal Calculator</p>
-              </li>
-              <li class="mb-4 flex flex-row">
-                <mdicon class="mt-0.5 mr-2" name="folder-outline"></mdicon>
-                <p>Features</p>
-              </li>
-              <li class="mb-4 flex flex-row">
-                <mdicon class="mt-0.5 mr-2" name="information-outline"></mdicon>
-                <p>About</p>
-              </li>
-              <li class="mb-4 flex flex-row">
-                <mdicon class="mt-0.5 mr-2" name="question-outline"></mdicon>
-                <p>FAQ</p>
-              </li>
+              <nuxt-link
+                v-scroll-to="{ el: '#calculator' }"
+                :to="{ path: '/', hash: 'calculator' }"
+              >
+                <li class="mb-4 flex flex-row">
+                  <mdicon class="mt-0.5 mr-2" name="calculator"></mdicon>
+                  <p>Kcal Calculator</p>
+                </li>
+              </nuxt-link>
+              <nuxt-link
+                v-scroll-to="{ el: '#features' }"
+                :to="{ path: '/', hash: 'features' }"
+              >
+                <li class="mb-4 flex flex-row">
+                  <mdicon class="mt-0.5 mr-2" name="folder-outline"></mdicon>
+                  <p>Features</p>
+                </li>
+              </nuxt-link>
+              <nuxt-link
+                v-scroll-to="{ el: '#calculator' }"
+                :to="{ path: '/about' }"
+              >
+                <li class="mb-4 flex flex-row">
+                  <mdicon
+                    class="mt-0.5 mr-2"
+                    name="information-outline"
+                  ></mdicon>
+                  <p>About</p>
+                </li>
+              </nuxt-link>
+              <nuxt-link
+                v-scroll-to="{ el: '#calculator' }"
+                :to="{ path: '/faq' }"
+              >
+                <li class="mb-4 flex flex-row">
+                  <mdicon class="mt-0.5 mr-2" name="question"></mdicon>
+                  <p>FAQ</p>
+                </li>
+              </nuxt-link>
             </ul>
           </div>
         </transition>
