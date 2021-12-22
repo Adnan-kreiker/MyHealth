@@ -63,10 +63,7 @@
                   <p>Features</p>
                 </li>
               </nuxt-link>
-              <nuxt-link
-                v-scroll-to="{ el: '#calculator' }"
-                :to="{ path: '/about' }"
-              >
+              <nuxt-link :to="{ path: '/about' }">
                 <li class="mb-4 flex flex-row">
                   <mdicon
                     class="mt-0.5 mr-2"
@@ -75,10 +72,7 @@
                   <p>About</p>
                 </li>
               </nuxt-link>
-              <nuxt-link
-                v-scroll-to="{ el: '#calculator' }"
-                :to="{ path: '/faq' }"
-              >
+              <nuxt-link :to="{ path: '/faq' }">
                 <li class="mb-4 flex flex-row">
                   <mdicon class="mt-0.5 mr-2" name="question"></mdicon>
                   <p>FAQ</p>

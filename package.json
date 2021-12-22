@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxi dev",
-    "build": "nuxi generate",
-    "start": "node .output/server/index.mjs",
+    "dev": "nuxt --port 3005",
+    "build": "nuxt build",
+    "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js"
@@ -17,11 +17,11 @@
     "@nuxtjs/fontawesome": "^1.1.2",
     "@nuxtjs/pwa": "^3.3.5",
     "@tailwindcss/line-clamp": "^0.3.0",
-    "aos": "^2.3.4",
+    "aos": "^3.0.0-beta.6",
     "apexcharts": "^3.32.0",
     "core-js": "^3.15.1",
+    "nuxt": "^2.15.7",
     "mdi-vue": "^3.0.12",
-    "nuxt-edge": "latest",
     "vue-apexcharts": "^1.6.2",
     "vue-clickaway": "^2.2.2",
     "vue-scrollto": "^2.20.0"
@@ -29,7 +29,6 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
-    "@nuxt/bridge": "npm:@nuxt/bridge-edge",
     "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/tailwindcss": "^4.2.1",

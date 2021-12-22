@@ -1,6 +1,6 @@
 <template>
   <client-only>
-    <div class="bg-gray-200 pb-12">
+    <div class="bg-gray-200 pb-12 relative min-h-96">
       <h2
         class="text-purple-700 font-bold text-5xl mx-auto px-8 sm:mr-20 py-10"
       >

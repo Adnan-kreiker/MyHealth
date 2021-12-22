@@ -19,11 +19,9 @@
           photographers, and other creative professionals.
         </p>
       </div>
-      <img
-        class="max-h-[480px] order-1 md:order-2 mx-auto"
-        src="/salad2.png"
-        alt=""
-      />
+      <div class="order-1 md:order-2 self-start">
+        <img class="max-h-[480px] mx-auto md:-mt-20" src="/salad2.png" alt="" />
+      </div>
     </div>
     <!-- <svg
       class="absolute bottom-0"

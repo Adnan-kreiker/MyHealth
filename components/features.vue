@@ -21,7 +21,7 @@
       class="bg-gray-100 p-4 border max-w-xs sm:max-w-max mx-auto border-gray-300 rounded-3xl text-white"
     >
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 bg-gradient-to-r from-purple-300 to-purple-600 rounded-3xl"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 bg-gradient-to-r from-purple-300 to-purple-600 rounded-3xl"
       >
         <div
           data-aos="flip-left"

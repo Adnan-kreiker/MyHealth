@@ -1,6 +1,6 @@
-import { defineNuxtConfig } from '@nuxt/bridge'
+// import { defineNuxtConfig } from '@nuxt/bridge'
 
-export default defineNuxtConfig({
+export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'myHealth',
@@ -40,6 +40,8 @@ export default defineNuxtConfig({
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
+  buildDir: '/dist',
+
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
@@ -77,11 +79,21 @@ export default defineNuxtConfig({
       lang: 'en',
     },
   },
+  // this fixes the bug when navigating to another page nuxt takes us to the bottom of the page instead to the top of it
+  router: {
+    scrollBehavior(_to, _from, savedPosition) {
+      if (savedPosition) {
+        return savedPosition
+      } else {
+        return { x: 0, y: 0 }
+      }
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: ['mdi-vue'],
   },
 
-  bridge: false,
-})
+  // bridge: false,
+}

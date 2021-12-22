@@ -11,7 +11,10 @@ export default {}
   width: 40px;
   height: 40px;
   background-color: rgb(251, 255, 10);
-
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: 100px auto;
   -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
   animation: sk-rotateplane 1.2s infinite ease-in-out;

@@ -54,7 +54,7 @@
       </div>
     </div>
     <spinner v-else></spinner>
-    <div class="col-span-12 lg:col-span-4">
+    <div v-if="suggestions" class="col-span-12 lg:col-span-4">
       <h2
         class="font-bold text-3xl ml-8 lg:ml-0 mt-10 lg:text-center mb-4 text-white"
       >
