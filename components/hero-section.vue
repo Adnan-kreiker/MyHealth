@@ -1,6 +1,6 @@
 <template>
   <main
-    class="bg-gradient-to-r from-red-400 via-pink-500 to-purple-500 min-h-screen clip lg:clip-lg m-0 pb-10"
+    class="bg-gradient-to-r from-red-400 via-pink-500 to-purple-500 min-h-[800px] clip lg:clip-lg m-0 pb-10"
   >
     <div
       class="grid grid-cols-4 grid-rows-1 sm:ml-16 ml-10 mr-8 pt-4 sm:pt-10 max-h-[calc(100vh-10px)]"
@@ -32,7 +32,8 @@
         </a>
       </div>
       <div class="col-span-2 lg:col-span-2 hidden sm:block">
-        <img
+        <nuxt-img
+          sizes="sm:100px"
           src="/hero.png"
           alt=""
           class="mx-auto max-h-[400px] object-cover"
