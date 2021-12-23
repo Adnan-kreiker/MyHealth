@@ -1,6 +1,6 @@
 <template>
   <main
-    class="bg-gradient-to-r from-red-400 via-pink-500 to-purple-500 min-h-[600px] clip lg:clip-lg m-0 pb-10"
+    class="bg-gradient-to-r from-red-400 via-pink-500 to-purple-500 min-h-fit clip lg:clip-lg m-0 pb-10"
   >
     <div
       class="grid grid-cols-4 grid-rows-1 sm:ml-16 ml-10 mr-8 pt-4 sm:pt-10 max-h-[calc(100vh-10px)]"
@@ -25,7 +25,7 @@
         </p>
         <a href="#recipes">
           <button
-            class="block capitalize text-lg font-bold py-4 text-gray-700 mx-auto sm:mr-auto sm:ml-0 px-12 mt-5 bg-yellow-400 rounded-lg shadow-xl transition duration-500 ease-in-out transform hover:scale-110"
+            class="block capitalize text-lg font-bold py-2 px-8 sm:py-4 text-gray-700 mx-auto sm:mr-auto sm:ml-0 sm:px-12 mt-5 bg-yellow-400 rounded-lg shadow-xl transition duration-500 ease-in-out transform hover:scale-110"
           >
             Check our recipes
           </button>

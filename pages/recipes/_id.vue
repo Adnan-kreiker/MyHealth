@@ -4,7 +4,7 @@
   >
     <div
       v-if="recipe"
-      class="mt-12 border-2 px-2 md:px-6 col-span-12 lg:col-span-8 shadow-2xl drop-shadow-2xl bg-gray-100 rounded-md border-gray-300 w-fit h-fit md:mx-auto pb-5"
+      class="mt-12 border-2 px-4 sm:px-4 md:px-6 col-span-12 lg:col-span-8 shadow-2xl drop-shadow-2xl bg-gray-100 rounded-md border-gray-300 w-fit h-fit md:mx-auto pb-5"
     >
       <h2
         class="text-purple-700 bg-gradient-to-r from-red-400 via-pink-500 my-0 text-transparent bg-clip-text to-purple-500 px-0 font-bold text-2xl md:text-5xl mx-auto py-5"
@@ -37,11 +37,11 @@
       <div>
         <div>
           <h2
-            class="pb-4 pt-0 pl-0 lg:pl-10 text-2xl underline decoration-2 decoration-purple-500"
+            class="pb-4 pt-6 sm:pt-0 pl-0 lg:pl-10 text-2xl underline decoration-2 decoration-purple-500"
           >
             Ingredients
           </h2>
-          <ul class="pl-4 lg:pl-16">
+          <ul class="pl-4 lg:pl-10">
             <li
               v-for="(ingredient, i) in recipe.recipe.ingredients"
               :key="i"

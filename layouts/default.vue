@@ -11,7 +11,9 @@
               alt=""
               class="inline-block mr-1"
             />
-            <span class="font-extrabold text-3xl text-white">MyHealth</span>
+            <span class="font-extrabold text-2xl sm:text-3xl text-white"
+              >MyHealth</span
+            >
           </div>
         </nuxt-link>
         <div class="hidden lg:block">
@@ -34,7 +36,7 @@
           <fa
             height="40"
             width="40"
-            class="text-white hover:cursor-pointer text-4xl pb-1"
+            class="text-white hover:cursor-pointer text-3xl"
             :icon="['fas', 'hamburger']"
           ></fa>
         </div>
