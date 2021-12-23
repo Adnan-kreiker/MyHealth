@@ -46,7 +46,7 @@
               >Female</label
             >
           </div>
-          <span class="sm:col-span-1 col-span-2 font-bold">Height</span>
+          <span class="sm:col-span-1 col-span-2 font-bold">Height (cm)</span>
           <input
             id="height"
             v-model="height"
@@ -54,7 +54,7 @@
             type="number"
             name="height"
           />
-          <span class="sm:col-span-1 col-span-2 font-bold">Weight</span>
+          <span class="sm:col-span-1 col-span-2 font-bold">Weight (kg)</span>
           <input
             id="weight"
             v-model="weight"
