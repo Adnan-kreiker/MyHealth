@@ -33,7 +33,7 @@
       </div>
       <div class="col-span-2 lg:col-span-2 hidden sm:block">
         <nuxt-img
-          sizes="sm:100px"
+          sizes="sm:100px md:250px lg:400px"
           src="/hero.png"
           alt=""
           class="mx-auto max-h-[400px] object-cover"
