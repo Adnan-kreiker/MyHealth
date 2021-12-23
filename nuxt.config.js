@@ -18,9 +18,6 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     {
-      src: '~/plugins/vue-mdi.js',
-    },
-    {
       src: '~/plugins/click-away.js',
     },
     {
@@ -57,6 +54,8 @@ export default {
         suffix: false,
         icons: {
           brands: ['faGithub', 'faDribbble', 'faFacebookSquare', 'faTwitter'],
+          regular: ['faStar', 'faQuestionCircle', 'faCommentDots'],
+          solid: ['faCalculator', 'faHamburger'],
         },
       },
     ],
@@ -97,9 +96,5 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    transpile: ['mdi-vue'],
-  },
-
-  // bridge: false,
+  build: {},
 }

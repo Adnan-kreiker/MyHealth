@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="bg-gradient-to-r from-red-400 via-pink-500 to-purple-500">
-      <nav class="flex flex-row justify-between py-3 sm:mx-16 mx-10">
+      <nav class="flex flex-row justify-between py-3 sm:mx-16 px-4">
         <nuxt-link class="hover:cursor-pointer" to="/">
           <div class="flex flex-row">
             <img
@@ -31,18 +31,18 @@
           <nuxt-link to="/faq"><span class="btn-header">FAQ</span></nuxt-link>
         </div>
         <div v-if="!showMenu" class="lg:hidden" @click="showMenu = true">
-          <mdicon
-            class="text-white hover:cursor-pointer"
+          <fa
             height="40"
             width="40"
-            name="menu"
-          ></mdicon>
+            class="text-white hover:cursor-pointer text-4xl pb-1"
+            :icon="['fas', 'hamburger']"
+          ></fa>
         </div>
         <transition name="glide">
           <div
             v-if="showMenu"
             v-on-clickaway="toggleDrawer"
-            class="transform fixed text-white w-1/2 left-0 h-screen shadow-2xl z-50 top-0 bg-gradient-to-r from-purple-400 via-pink-500 to-media-500 ease-in-out duration-300"
+            class="transform fixed text-white w-2/3 sm:w-1/2 left-0 h-screen shadow-2xl z-50 top-0 bg-gradient-to-r from-purple-400 via-pink-500 to-media-500 ease-in-out duration-300"
           >
             <ul class="p-3 text-lg">
               <nuxt-link
@@ -50,7 +50,12 @@
                 :to="{ path: '/', hash: 'calculator' }"
               >
                 <li class="mb-4 flex flex-row">
-                  <mdicon class="mt-0.5 mr-2" name="calculator"></mdicon>
+                  <fa
+                    height="40"
+                    width="40"
+                    class="text-white hover:cursor-pointer mt-1 mr-2"
+                    :icon="['fas', 'calculator']"
+                  ></fa>
                   <p>Kcal Calculator</p>
                 </li>
               </nuxt-link>
@@ -59,22 +64,35 @@
                 :to="{ path: '/', hash: 'features' }"
               >
                 <li class="mb-4 flex flex-row">
-                  <mdicon class="mt-0.5 mr-2" name="folder-outline"></mdicon>
+                  <fa
+                    height="40"
+                    width="40"
+                    class="text-white hover:cursor-pointer mt-1 mr-2"
+                    :icon="['far', 'star']"
+                  ></fa>
+
                   <p>Features</p>
                 </li>
               </nuxt-link>
               <nuxt-link :to="{ path: '/about' }">
                 <li class="mb-4 flex flex-row">
-                  <mdicon
-                    class="mt-0.5 mr-2"
-                    name="information-outline"
-                  ></mdicon>
+                  <fa
+                    height="40"
+                    width="40"
+                    class="text-white hover:cursor-pointer mt-1 mr-2"
+                    :icon="['far', 'comment-dots']"
+                  ></fa>
                   <p>About</p>
                 </li>
               </nuxt-link>
               <nuxt-link :to="{ path: '/faq' }">
                 <li class="mb-4 flex flex-row">
-                  <mdicon class="mt-0.5 mr-2" name="question"></mdicon>
+                  <fa
+                    height="40"
+                    width="40"
+                    class="text-white hover:cursor-pointer mt-1 mr-2"
+                    :icon="['far', 'question-circle']"
+                  ></fa>
                   <p>FAQ</p>
                 </li>
               </nuxt-link>

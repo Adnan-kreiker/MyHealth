@@ -44,6 +44,7 @@
                     :src="recipe.recipe.image"
                     class="max-h-96 object-cover rounded-t-xl"
                     alt=""
+                    height="296"
                   />
                   <!-- Tag rekomendasi -->
                   <div
