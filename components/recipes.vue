@@ -89,12 +89,7 @@
                       </div>
                     </div>
                   </div>
-                  <!-- Alamat -->
-                  <!-- <p class="pb-1 md:pb-2 text-xs md:text-sm text-gray-500">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua
-                  </p> -->
-                  <!-- Tombol pesan -->
+
                   <button
                     class="mt-auto bottom-0 flex justify-center bg-purple-500 hover:bg-white text-sm md:text-base border hover:outline-2 hover:outline-purple-500 rounded-xl w-32 md:w-36 p-1 text-gray-100 hover:text-purple-900"
                   >
