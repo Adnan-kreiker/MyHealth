@@ -1,16 +1,21 @@
 <template>
   <div>
     <hero-section></hero-section>
-    <features id="features"></features>
-    <calorie-calculator id="calculator"></calorie-calculator>
-    <recipes id="recipes"></recipes>
+    <lazy-features id="features"></lazy-features>
+    <lazy-calorie-calculator id="calculator"></lazy-calorie-calculator>
+    <render-on-scroll :offset-y="100" height="700px">
+      <lazy-recipes id="recipes"></lazy-recipes>
+    </render-on-scroll>
   </div>
 </template>
 
 <script>
-import recipes from '~/components/recipes.vue'
+import RenderOnScroll from 'nuxt-render-on-scroll'
+
 export default {
-  components: { recipes },
+  components: {
+    RenderOnScroll,
+  },
 }
 </script>
 Features

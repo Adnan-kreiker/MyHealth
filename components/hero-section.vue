@@ -1,6 +1,6 @@
 <template>
   <main
-    class="bg-gradient-to-r from-red-400 via-pink-500 to-purple-500 clip lg:clip-lg m-0 pb-10"
+    class="bg-gradient-to-r from-red-400 via-pink-500 to-purple-500 min-h-screen clip lg:clip-lg m-0 pb-10"
   >
     <div
       class="grid grid-cols-4 grid-rows-1 sm:ml-16 ml-10 mr-8 pt-4 sm:pt-10 max-h-[calc(100vh-10px)]"
@@ -11,7 +11,8 @@
         >
           Regain Control Over Your <span class="text-yellow-400">Health</span>
         </h1>
-        <img
+        <nuxt-img
+          sizes="sm:100px md:250px lg:300px"
           src="/hero.png"
           alt=""
           class="mx-auto h-44 sm:hidden object-cover"

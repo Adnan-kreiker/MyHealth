@@ -1,5 +1,3 @@
-// import { defineNuxtConfig } from '@nuxt/bridge'
-
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -36,6 +34,9 @@ export default {
       src: '~/plugins/aos.js',
       mode: 'client',
     },
+    {
+      src: '~/plugins/renderOnScroll.js',
+    },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -67,8 +68,12 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+
     '@nuxtjs/dotenv',
+
     ['vue-scrollto/nuxt', { duration: 300 }],
+
+    '@nuxt/image',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

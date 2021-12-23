@@ -1,6 +1,6 @@
 <template>
   <client-only>
-    <div class="bg-gray-200 pb-12 relative min-h-96">
+    <div class="bg-gray-200 pb-12 relative min-h-[700px]">
       <h2
         class="text-purple-700 font-bold text-5xl mx-auto px-8 sm:mr-20 py-10"
       >
@@ -131,7 +131,7 @@ export default {
           },
         }
       )
-      this.recipes = res.hits
+      this.recipes = res.hits.splice(0, 6)
       console.log(res)
     } catch (error) {
       console.log(error)

@@ -4,8 +4,9 @@
       data-aos="fade-right"
       class="sm:flex flex-col w-full sm:w-max sm:flex-row"
     >
-      <img
-        height="40"
+      <nuxt-img
+        sizes="sm:50px md:150px lg:150px"
+        height="80"
         width="100"
         class="object-contain mx-auto sm:mr-6 mt-14 sm:mt-0 sm:pb-10 h-20 sm:h-36"
         src="/crown.png"
@@ -41,7 +42,7 @@
           data-aos-duration="750"
           class="py-4 mx-2 rounded-lg transition duration-500 ease-in-out hover:bg-yellow-500 transform hover:-translate-y-1 hover:scale-110"
         >
-          <img
+          <nuxt-img
             height="70"
             width="70"
             class="mx-auto"
